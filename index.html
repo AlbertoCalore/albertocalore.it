@@ -1,197 +1,92 @@
-<!doctype html>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Alberto Calore</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no"
-        />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-    </head>
-    <body class="is-preload">
-        <!-- Wrapper -->
-        <div id="wrapper">
-            <!-- Intro -->
-            <section class="intro">
-                <header>
-                    <h1>Alberto Calore</h1>
-                    <p>
-                        M.D. in Statistical sciences <br>
-                        B.D. in Economics
-                    </p>
-                    <ul class="actions">
-                        <li>
-                            <a href="#first" class="arrow scrolly"
-                                ><span class="label">Next</span></a>
-                        </li>
-                    </ul>
-                </header>
-                <div class="content">
-                    <span class="image fill" data-position="center"
-                        ><img src="images/propic.jpg" alt=""
-                    /></span>
-                </div>
-            </section>
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <style>
+        body { margin: 0; padding: 0; }
+        html { height: 100%; cursor: default; }
+        body {
+            font-family: "Roboto", sans-serif; /* Default font */
+            width: 100%; height: 100%;
+            text-align: center;
+            display: table;
+            opacity: 1;
+            animation: fadein 3s forwards;
+        }
+        h2 {
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        img {
+            width: 25%; /* Image width */
+            border: 0; /* For IE */
+            /* Aspect ratio of image, gives initial dimension to prevent text moving down once image is loaded */
+            /* When changing logo, change this also */
+            aspect-ratio: 125 / 50;
+        }
+        #main {
+            vertical-align: middle;
+            display: table-cell;
+        }
+        /* Progress bar */
+        #progress {
+            width: 45%; /* Bar width */
+            margin: 0 auto;
+            border-radius: 10px; /* Roundness */
+            background-color: #a8a8a8; /* Background colour */
+            padding: 7px 5px;
+            /* border: 5px solid #a8a8a8; Border */
+        }
+        #fill {
+            padding: 2px 0;
+            background-color: #00b98b; /* Fill colour */
+            width: 35%; /* Bar percentage, change text below also */
+            border-radius: 25px; /* Roundness */
+            animation: proanimate 2s;
+        }
+        #barpercent h3 {
+            color: white; /* Bar percentage text colour */
+            margin: 0; padding: 0;
+            opacity: 1;
+            animation: fadein 3s forwards;
+        }
 
-            <!-- Section -->
-            <section id="first">
-                <header>
-                    <h2>About me</h2>
-                    <p>
-                        <ul class="items">
-                            <li>
-                                <h3>My studies</h3>
-                                <ul class="icons">
-                                    <b> Master's degree in Statistical sciences </b> <br> <i>@Università degli Studi di Padova</i> <br>
-                                    <br>
-                                    <b> Bachelor's degree in Economics </b> <br> <i>@Università degli Studi di Padova</i> <br>
-                                    <br>
-                                    <b> Scientific high school degreee </b> <br> <i>@Liceo Scientifico Ippolito Nievo (Padova)</i> <br>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>Programming knowledge</h3>
-                                <ul class="icons">
-                                    <li class="icon brands fa-r-project"> R: advanced </li>
-                                    <li class="icon solid fa-chart-area"> SAS: advanced </li>
-                                    <li class="icon brands fa-python"> Python: intermediate </li>
-                                    <li class="icon solid fa-database"> SQL: intermediate </li>
-                                    <li class="icon brands fa-html5"> HTML: basic </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>Software knowledge</h3>
-                                <ul class="icons">
-                                    <li class="icon brands fa-linux"> Linux: advanced </li>
-                                    <li class="icon brands fa-windows"> Windows: advanced </li>
-                                    <li class="icon solid fa-file-word"> Office: advanced </li> 
-                                    <li class="icon solid fa-pen-nib"> LaTeX: advanced </li>
-                                    <li class="icon brands fa-docker"> Docker: intermediate </li>
-                                    <li class="icon brands fa-github"> Git: intermediate </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h3>Languages spoken</h3>
-                                <ul class="icons">
-                                    <li class="icon solid fa-language"> Italian: C2 </li>
-                                    <li class="icon solid fa-language"> English: C1 </li>
-                                    <li class="icon solid fa-language"> Spanish: B2 </li>
-                                    <li class="icon solid fa-language"> French: A2 </li>
-                                </ul>
-                            </li>
-                        </ul>
+        /* Fades in animation */
+        @keyframes fadein  {
+            from { opacity: 0; }
+        }
+        /* Animates bar on page load */
+        @keyframes proanimate {
+            from { width: 0%; }
+        }
 
-                    </p>
-                </header>
-                <div class="content">
-                    <p>
-                        <b>My name is Alberto Calore!</b> I'm a Statistician and an Economist who's also very good at coding.<br>
-                        I graduated with a Bachelor's degree in Economics in 2021, followed by a Master's degree in Statistical Sciences in 2024, both from the University of Padua. <br>
-                        <ul></ul>
-                        Thanks to my Master's Degree I achieved a deep knowledge in:
-                        <ul>
-	                    <li>analyzing all kind of data using the latest Data Mining technologies;</li>
-	                    <li>analyzing time series, in particular economical data;</li>
-	                    <li>analyzing epidemiologic and medical data, with particular dedication on neourlogical, oncological and omics data.</li>
-                        </ul>
-
-                        Thanks to my Bachelor's Degree I achieved knowledge of:
-                        <ul>
-	                    <li>the functioning of corporate economic and financial control systems;</li>
-	                    <li>the functioning of institutions and monetary and financial markets;</li>
-                            <li>marketing and human resource management.</li>
-                        </ul>
-
-                        My programming skills are assured by the publication on CRAN of the R package <a href="https://cran.r-project.org/web/packages/MARMoT/index.html"> MARMoT </a>, currently with 2000+ downloads, and by the certification received by SAS as a <a href="https://www.sas.com/it_it/academic/index/studenti-con-certificazione-sas.html">certified</a> "SAS programmer in the field of Advanced Data Analysis for Life and Social Sciences". <br>
-                        <br>
-                        Some of my past working experiences and collaborations include "Data manipulation for Nuclear fusion simulations" (200 hours - High School training programme) at Consorzio RFX in Padua,
-                        working as a counting agent during elections, working with University of Padua supporting with COVID-19 regulations,
-                        assisting international students using Spanish and English during open days and graduation cerimonies, and working as a professional photographer.<br>
-                        <br>
-                        Personally I value my critical thinking and problem solving abilities that allow me to be efficient during analisys.
-                        Also my experience has helped me develop leadership skills and confidence in public speaking: Statistical science is not a lonely job and an effective communication comes a long way.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Section -->
-            <section>
-                <header>
-                    <h2>Get in touch</h2>
-                    <p>
-                        <ul class="items">
-                            <li>
-                                <h3>Email</h3>
-                                <a href="work@albertocalore.it">work@albertocalore.it</a>
-                            </li>
-                            <li>
-                                <h3>Elsewhere</h3>
-                                <ul class="icons">
-                                    <li>
-                                        <a
-                                            href="https://www.linkedin.com/in/alberto-calore/"
-                                            class="icon brands fa-linkedin-in"
-                                            ><span class="label">LinkedIn</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/AlbertoCalore" class="icon brands fa-github"
-                                            ><span class="label">GitHub</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </p>
-                </header>
-                <div class="content">
-                    <span class="image main"
-                        ><img src="images/bottompic.jpg" alt=""
-                    /></span>
-                </div>
-            </section>
-            <br>
-                <div class="copyright">
-                    I hereby authorize the processing of my personal data pursuant to Article 13 of EU Regulation 2016/679 and Legislative Decree 196/2003, as amended.
-                </div>
-            <br>
-            <!-- Copyright -->
-            <div class="copyright">
-                &copy; Paradigm Shift. All rights reserved. Design:
-                <a href="https://html5up.net">HTML5 UP</a>.
-            </div>
-        </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <!-- My scripts -->
-        <script
-            type="text/javascript"
-            async
-            src="//cdn.credly.com/assets/utilities/embed.js"
-        ></script>
-    </body>
+        @media screen and (max-width:600px) {
+            img {
+                width: 60%;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            h2 {
+                margin: 1.1em;
+                font-size: 1.1em;
+            }
+            #progress {
+                width: 80%; /* Bar width */
+            }
+        }
+    </style>
+    <title>Coming Soon</title>
+</head>
+<body>
+    <div id="main">
+        <img src="logo.png" alt="Logo Image">
+        <h1>Company Name</h1>
+        <h2>Our website is currently under construction. </h2>
+        <div id="progress"><div id="fill"><div id="barpercent"><h3>35%</h3></div></div></div>
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</body>
 </html>
-
-                                <!--
-                                <div class='bestr-badge_imageUrl'><a style='text-decoration: none; box-shadow:none; border: none;' target='_blank'
-                                    href='https://bestr.it/award/show/NtPgDrTISguS16diSCKXqQ?ln=it'><img style='margin:0px !important; padding:0px !important; border:0px
-                                    !important;' class='bestr-badge_imageUrl_svg' src='https://bestr.it/filemanager/show/22f49757-a22e-458e-b4cf-647387b9821e.png'
-                                    alt='Bestr Badge'></a></div>
-                                    </p>
-                                <div class='bestr-badge_imageUrl'><a style='text-decoration: none; box-shadow:none; border: none;' target='_blank'
-                                    href='https://bestr.it/award/show/2fx7CsifS4q0fkJxsAg2nQ?ln=it'><img style='margin:0px !important; padding:0px !important; border:0px
-                                        !important;' class='bestr-badge_imageUrl_svg' src='https://bestr.it/filemanager/show/c6788879-12f1-492a-a728-1739ebe79f5c.png'
-                                        alt='Bestr Badge'></a></div>
-                                -->
